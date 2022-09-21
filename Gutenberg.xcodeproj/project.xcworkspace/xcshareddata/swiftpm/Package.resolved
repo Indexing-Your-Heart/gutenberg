@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "codeeditorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mchakravarty/CodeEditorView",
+      "state" : {
+        "revision" : "325759c1cc2873fd5eba0f8d4eedd0233ac9eca7",
+        "version" : "0.10.0"
+      }
+    },
+    {
+      "identity" : "jensonkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Indexing-Your-Heart/JensonKit",
+      "state" : {
+        "branch" : "root",
+        "revision" : "e92b39c15c24fa0a69b5f591ad94ffc4fe72e1b0"
+      }
+    },
+    {
+      "identity" : "runestone",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/simonbs/Runestone",
+      "state" : {
+        "revision" : "cdc189c259caf6f7bbb3c5e733e5c27c36b7dc33",
+        "version" : "0.2.3"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/SwiftUI-Introspect",
+      "state" : {
+        "revision" : "f2616860a41f9d9932da412a8978fec79c06fe24",
+        "version" : "0.1.4"
+      }
+    },
+    {
+      "identity" : "treesitterlanguages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/simonbs/treesitterlanguages",
+      "state" : {
+        "revision" : "36050fa1873c4c475769845a268088b67306a746",
+        "version" : "0.1.2"
+      }
+    }
+  ],
+  "version" : 2
+}
