@@ -34,22 +34,25 @@ https://git.pixie.town/thufie/npl-builder/src/branch/main/cnpl.md.
 
 **Gutenberg** is built with ethical-source and open-source software.
 
-**JensonKit** (CNPLv7+)
+**JensonKit** (CNPLv7+)  
 https://github.com/Indexing-Your-Heart/JensonKit
 
-**Introspect** (MIT)
+**Introspect** (MIT)  
 https://github.com/timbersoftware/SwiftUI-Introspect
 
-**Runestone** (MIT)
+**Runestone** (MIT)  
 https://github.com/simonbs/Runestone
+
+**CodeEditorView** (Apache 2.0)  
+https://github.com/mchakravarty/CodeEditorView
 
 ---
 
 **Gutenberg** comes with multiple fonts under the SIL Open Font License.
 
-**Crimson Text**
+**Crimson Text**  
 https://fonts.google.com/specimen/Crimson+Text
 
-**iA Writer Mono**
+**iA Writer Mono**  
 https://github.com/iaolo/iA-Fonts
 
