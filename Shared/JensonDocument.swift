@@ -1,5 +1,5 @@
 //
-//  Jenson_VisualizerDocument.swift
+//  JensonDocument.swift
 //  Created by Marquis Kurt on 9/8/22.
 //  This file is part of Gutenberg.
 //
@@ -59,8 +59,9 @@ struct JensonDocument: FileDocument {
         do {
             content = try reader.decode()
             _readDecompressedFile = false
-        } catch let error where error is DecodingError { throw error }
-        catch {
+        } catch let error where error is DecodingError {
+            throw error
+        } catch {
             reader.compressed = false
             content = try reader.decode()
             _readDecompressedFile = true

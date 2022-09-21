@@ -16,8 +16,12 @@ extension JensonDocument: Transferable {
     static var transferRepresentation: some TransferRepresentation {
         DataRepresentation(contentType: .jenson) { file in
             let writer = JensonWriter(contentsOf: file.content)
-            do { return try writer.data() }
-            catch { return Data() }
+            do {
+                return try writer.data()
+
+            } catch {
+                return Data()
+            }
         } importing: { data in
             let reader = JensonReader(data)
             let file = (try? reader.decode()) ?? JensonFile.template

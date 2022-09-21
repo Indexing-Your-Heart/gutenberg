@@ -44,7 +44,8 @@ struct JensonRefreshEventCell: View {
 
     private func refreshLabel(for trigger: JensonRefreshContent) -> some View {
         Label(
-            "Refresh **\(trigger.kind.rawValue)** with priority _\(trigger.priority ?? 0)_ to '\(trigger.resourceName)'",
+            "Refresh **\(trigger.kind.rawValue)** with priority _\(trigger.priority ?? 0)_ "
+                + "to '\(trigger.resourceName)'",
             systemImage: "arrow.triangle.2.circlepath"
         )
         .foregroundColor(.indigo)

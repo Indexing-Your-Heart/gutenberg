@@ -21,7 +21,7 @@ struct GutenbergSourceView: View {
     @Binding var document: JensonDocument
 
     /// Whether dark mode should be enabled on the source view.
-    @State private var darkModeEnabled: Bool? = nil
+    @State private var darkModeEnabled: Bool?
 
     /// The editor's font size.
     @State private var fontSize: CGFloat = 13.0

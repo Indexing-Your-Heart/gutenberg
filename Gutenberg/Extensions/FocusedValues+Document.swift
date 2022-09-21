@@ -14,12 +14,12 @@ import SwiftUI
 extension FocusedValues {
     /// A struct that represents a Jenson document.
     struct DocumentFocusedValues: FocusedValueKey {
-        typealias Value = Binding<JensonDocument>
+        typealias Value = Binding<JensonDocument> // swiftlint:disable:this nesting
     }
 
     /// A struct that represents a file validator.
     struct ValidatorFocusedValues: FocusedValueKey {
-        typealias Value = Binding<FileValidator>
+        typealias Value = Binding<FileValidator> // swiftlint:disable:this nesting
     }
 
     /// The currently focused document.

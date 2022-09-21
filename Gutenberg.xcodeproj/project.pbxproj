@@ -415,6 +415,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95315F6428D8B2840079E831 /* Build configuration list for PBXNativeTarget "Gutenberg (iOS)" */;
 			buildPhases = (
+				9569158E28DB4B25000D3D8F /* Run SwiftLint */,
 				95315F5028D8B2830079E831 /* Sources */,
 				95315F5128D8B2830079E831 /* Frameworks */,
 				95315F5228D8B2830079E831 /* Resources */,
@@ -440,6 +441,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95B5D25C28CA747D00C7C07A /* Build configuration list for PBXNativeTarget "Gutenberg" */;
 			buildPhases = (
+				9569158F28DB4B59000D3D8F /* Run SwiftLint */,
 				95B5D24628CA747B00C7C07A /* Sources */,
 				95B5D24728CA747B00C7C07A /* Frameworks */,
 				95B5D24828CA747B00C7C07A /* Resources */,
@@ -532,6 +534,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9569158E28DB4B25000D3D8F /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		9569158F28DB4B59000D3D8F /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		95315F5028D8B2830079E831 /* Sources */ = {
