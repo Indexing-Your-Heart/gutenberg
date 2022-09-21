@@ -83,7 +83,7 @@
 		95B5D26328CA7D9900C7C07A /* JensonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5D26228CA7D9900C7C07A /* JensonCellView.swift */; };
 		95D75D3D28DA416000062587 /* GutenbergDocumentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */; };
 		95D75D4028DA446000062587 /* ModifiedDefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */; };
-		95D75D4228DA448E00062587 /* RunestoneViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D4128DA448E00062587 /* RunestoneViewDelegate.swift */; };
+		95D75D4228DA448E00062587 /* RunestoneEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D4128DA448E00062587 /* RunestoneEditorDelegate.swift */; };
 		95DB209B28CFB5FF0079D624 /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 95DB209A28CFB5FF0079D624 /* CodeEditorView */; };
 		95F6E18D28D4DEB300CD9FFB /* FileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6E18C28D4DEB300CD9FFB /* FileValidator.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +110,8 @@
 		9558463E28D8E274004EE8CD /* GutenbergSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSourceView.swift; sourceTree = "<group>"; };
 		9558464028D8E368004EE8CD /* JensonDocument+Transferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JensonDocument+Transferable.swift"; sourceTree = "<group>"; };
 		9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergPreview.swift; sourceTree = "<group>"; };
+		9569158C28DB460A000D3D8F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9569158D28DB47DF000D3D8F /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		957B97C628D6530C0050B41A /* NSSavePanel+StringWriteable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSavePanel+StringWriteable.swift"; sourceTree = "<group>"; };
 		957B97C828D656B40050B41A /* JensonFile+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JensonFile+Dummy.swift"; sourceTree = "<group>"; };
 		957B97CA28D660180050B41A /* FocusedValues+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FocusedValues+Document.swift"; sourceTree = "<group>"; };
@@ -143,7 +145,7 @@
 		95B5D26228CA7D9900C7C07A /* JensonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonCellView.swift; sourceTree = "<group>"; };
 		95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergDocumentContainer.swift; sourceTree = "<group>"; };
 		95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedDefaultTheme.swift; sourceTree = "<group>"; };
-		95D75D4128DA448E00062587 /* RunestoneViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneViewDelegate.swift; sourceTree = "<group>"; };
+		95D75D4128DA448E00062587 /* RunestoneEditorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditorDelegate.swift; sourceTree = "<group>"; };
 		95F6E18C28D4DEB300CD9FFB /* FileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,6 +353,8 @@
 		95B5D24128CA747B00C7C07A = {
 			isa = PBXGroup;
 			children = (
+				9569158C28DB460A000D3D8F /* README.md */,
+				9569158D28DB47DF000D3D8F /* LICENSE.md */,
 				95315F6528D8B2F30079E831 /* Shared */,
 				95B5D24C28CA747B00C7C07A /* Gutenberg */,
 				95315F5528D8B2830079E831 /* Gutenberg (iOS) */,
@@ -399,7 +403,7 @@
 			children = (
 				95315F7328D8B6E60079E831 /* RunestoneEditor.swift */,
 				95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */,
-				95D75D4128DA448E00062587 /* RunestoneViewDelegate.swift */,
+				95D75D4128DA448E00062587 /* RunestoneEditorDelegate.swift */,
 			);
 			path = Bridging;
 			sourceTree = "<group>";
@@ -561,7 +565,7 @@
 				950DF31528DA19D100C4D17A /* UIApplication+Version.swift in Sources */,
 				95315F5B28D8B2830079E831 /* ContentView.swift in Sources */,
 				9558463B28D8E252004EE8CD /* JensonQuestionCell.swift in Sources */,
-				95D75D4228DA448E00062587 /* RunestoneViewDelegate.swift in Sources */,
+				95D75D4228DA448E00062587 /* RunestoneEditorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

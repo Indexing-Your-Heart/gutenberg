@@ -1,5 +1,5 @@
 //
-//  TextView+Convenience.swift
+//  RunestoneViewDelegate.swift
 //  Created by Marquis Kurt on 9/20/22.
 //  This file is part of Gutenberg.
 //
@@ -9,17 +9,19 @@
 //  Gutenberg comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law. See the CNPL for details.
 //
 
-import Foundation
 import Runestone
+import SwiftUI
 
-extension TextView {
-    /// Creates a TextView with autocorrect features disabled.
-    static func withDisabledAutocorrect() -> TextView {
-        let textView = TextView()
-        textView.autocorrectionType = .no
-        textView.autocapitalizationType = .none
-        textView.smartQuotesType = .no
-        textView.smartDashesType = .no
-        return textView
+/// A delegate class used in the Runestone editor view to update bound text.
+class RunestoneEditorDelegate: TextViewDelegate {
+    /// The text that will be bound to this view.
+    @Binding var text: String
+
+    init(text: Binding<String>) {
+        _text = text
+    }
+
+    func textViewDidChange(_ textView: TextView) {
+        text = textView.text
     }
 }
