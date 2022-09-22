@@ -14,7 +14,7 @@ import SwiftUI
 /// The primary content view of the app.
 struct ContentView: View {
     /// The pane that should open by default. Defaults to the preview.
-    @AppStorage("default-pane") private var preferredDefaultPane: JensonViewerPane = .preview
+    @AppStorage("default-pane") private var preferredDefaultPane: JensonViewerPane = .source
 
     /// Whether the Narrator character appears on unnamed dialogue events in the preview. Defaults to false.
     @AppStorage("display-narrator") private var displayNarrator = false
@@ -60,15 +60,11 @@ struct ContentView: View {
     private var toolbar: some ToolbarContent {
         Group {
             ToolbarItem(placement: .navigationBarLeading) {
-                Menu {
-                    Picker("Pane", selection: $pane) {
-                        ForEach(JensonViewerPane.allCases, id: \.hashValue) { paneCase in
-                            Label(paneCase.rawValue, systemImage: paneCase.systemImage)
-                                .tag(paneCase)
-                        }
+                Picker("Pane", selection: $pane) {
+                    ForEach(JensonViewerPane.allCases, id: \.hashValue) { paneCase in
+                        Label(paneCase.rawValue, systemImage: paneCase.systemImage)
+                            .tag(paneCase)
                     }
-                } label: {
-                    Label("Current View", systemImage: "macwindow.on.rectangle")
                 }
             }
             ToolbarItem(placement: .primaryAction) {

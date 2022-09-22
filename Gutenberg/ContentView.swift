@@ -15,7 +15,7 @@ import SwiftUI
 /// The primary content view.
 struct ContentView: View {
     /// The pane that should open by default. Defaults to the preview.
-    @AppStorage("default-pane") private var preferredDefaultPane: JensonViewerPane = .preview
+    @AppStorage("default-pane") private var preferredDefaultPane: JensonViewerPane = .source
 
     /// Whether the preview should take the full width of the window. Defaults to false.
     @AppStorage("use-full-width") private var fullWidth = false
