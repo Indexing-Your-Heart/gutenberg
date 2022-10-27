@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.0-7] - 27-10-2022
+- Reintroduces Mac app as a Catalyst app from Gutenberg Mobile
+- Refactors source editing commands to a menu
+- Deprecates old Mac source code
+
 ## [1.0-6] - 22-09-2022
 - Sets default view to source view instead of the preview.
 - Changes toolbar item in iOS to display current view.

@@ -20,36 +20,23 @@ struct GutenbergSourceView: View {
     /// A binding to the Jenson document.
     @Binding var document: JensonDocument
 
-    /// Whether dark mode should be enabled on the source view.
-    @State private var darkModeEnabled: Bool?
-
-    /// The editor's font size.
-    @State private var fontSize: CGFloat = 13.0
-
-    /// The spacing between lines.
-    @State private var lineSpacing: CGFloat = 1.2
-
-    /// Whether line numbers should be visible.
-    @State private var lineNumbersVisible = true
-
-    /// Whether line wrapping is enabled.
-    @State private var lineWrapping = true
+    @EnvironmentObject var sourceModel: GutenbergSourceEditorViewModel
 
     /// The current find and replace state.
     @State private var findNavigationState = RunestoneEditor.FindInteractionStyle.disabled
 
     /// The current appearance of the editor view.
     private var systemAppearance: ColorScheme {
-        guard let darkModeEnabled else { return defaultColorScheme }
+        guard let darkModeEnabled = sourceModel.darkModeEnabled else { return defaultColorScheme }
         return darkModeEnabled ? .dark : .light
     }
 
     var body: some View {
         RunestoneEditor(text: $document.jsonRepresentation)
-            .showLineNumbers(lineNumbersVisible)
-            .lineSpacing(lineSpacing)
-            .fontSize(fontSize)
-            .lineWrapping(lineWrapping)
+            .showLineNumbers(sourceModel.lineNumbersVisible)
+            .lineSpacing(sourceModel.lineSpacing)
+            .fontSize(sourceModel.fontSize)
+            .lineWrapping(sourceModel.lineWrapping)
             .findNavigator(presentationStyle: $findNavigationState)
             .environment(\.colorScheme, systemAppearance)
             .introspectViewController { viewController in
@@ -59,22 +46,27 @@ struct GutenbergSourceView: View {
             }
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbar(id: "sourceeditor") {
+                ToolbarItem(id: "nil") {
+                    EmptyView()
+                }
+                .customizationBehavior(.disabled)
+                #if !targetEnvironment(macCatalyst)
                 ToolbarItem(id: "fontsize") {
                     ControlGroup {
                         Button {
-                            withAnimation { fontSize -= 1 }
+                            withAnimation { sourceModel.fontSize -= 1 }
                         } label: {
                             Label("Decrease Font Size", systemImage: "textformat.size.smaller")
                         }
                         .keyboardShortcut("-", modifiers: [.command, .shift])
                         Button {
-                            withAnimation { fontSize = 13 }
+                            withAnimation { sourceModel.fontSize = 13 }
                         } label: {
                             Label("Reset Font Size", systemImage: "equal")
                         }
                         .keyboardShortcut("=", modifiers: [.command])
                         Button {
-                            withAnimation { fontSize += 1 }
+                            withAnimation { sourceModel.fontSize += 1 }
                         } label: {
                             Label("Increase Font Size", systemImage: "textformat.size.larger")
                         }
@@ -87,7 +79,7 @@ struct GutenbergSourceView: View {
                     ControlGroup {
                         Button {
                             withAnimation {
-                                lineSpacing = max(1.0, lineSpacing - 0.25)
+                                sourceModel.lineSpacing = max(1.0, sourceModel.lineSpacing - 0.25)
                             }
                         } label: {
                             Label("Decrease Line Spacing", systemImage: "text.badge.minus")
@@ -96,7 +88,7 @@ struct GutenbergSourceView: View {
 
                         Button {
                             withAnimation {
-                                lineSpacing = max(1.0, lineSpacing + 0.25)
+                                sourceModel.lineSpacing = max(1.0, sourceModel.lineSpacing + 0.25)
                             }
                         } label: {
                             Label("Increase Line Spacing", systemImage: "text.badge.plus")
@@ -107,13 +99,13 @@ struct GutenbergSourceView: View {
                     }
                 }
                 ToolbarItem(id: "linenumbers") {
-                    Toggle(isOn: $lineNumbersVisible) {
+                    Toggle(isOn: $sourceModel.lineNumbersVisible) {
                         Label("Toggle Line Numbers", systemImage: "list.number")
                     }
                     .keyboardShortcut("l", modifiers: [.control, .shift, .command])
                 }
                 ToolbarItem(id: "linewrapping", showsByDefault: false) {
-                    Toggle(isOn: $lineWrapping) {
+                    Toggle(isOn: $sourceModel.lineWrapping) {
                         Label("Toggle Line Wrapping", systemImage: "text.append")
                     }
                     .keyboardShortcut("l", modifiers: [.control, .option, .command])
@@ -121,14 +113,14 @@ struct GutenbergSourceView: View {
                 ToolbarItem(id: "appearance", showsByDefault: false) {
                     Button {
                         withAnimation {
-                            if let currentAppearance = darkModeEnabled {
-                                darkModeEnabled = !currentAppearance
-                            } else { darkModeEnabled = true }
+                            if let currentAppearance = sourceModel.darkModeEnabled {
+                                sourceModel.darkModeEnabled = !currentAppearance
+                            } else { sourceModel.darkModeEnabled = true }
                         }
                     } label: {
                         Label(
                             "Toggle Editor Appearance",
-                            systemImage: darkModeEnabled == true ? "moon.circle.fill" : "moon.circle"
+                            systemImage: sourceModel.darkModeEnabled == true ? "moon.circle.fill" : "moon.circle"
                         )
                     }
                 }
@@ -152,7 +144,7 @@ struct GutenbergSourceView: View {
                         Label("Find/Replace", systemImage: "magnifyingglass.circle")
                     }
                 }
-                ToolbarItem(id: "find", placement: .primaryAction) {}
+                #endif
             }
             .toolbarRole(.editor)
     }

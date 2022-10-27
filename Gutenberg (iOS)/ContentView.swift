@@ -25,6 +25,8 @@ struct ContentView: View {
     /// A binding to the document that will be manipulated.
     @Binding var document: JensonDocument
 
+    @EnvironmentObject var sourceModel: GutenbergSourceEditorViewModel
+
     /// The document's file URL. Used for renaming and duplicating files.
     var fileURL: URL?
 
@@ -40,8 +42,11 @@ struct ContentView: View {
                 switch pane {
                 case .preview:
                     GutenbergPreview(document: doc)
+                        .navigationBarBackButtonHidden()
                 case .source:
                     GutenbergSourceView(document: doc)
+                        .navigationBarBackButtonHidden()
+                        .environmentObject(sourceModel)
                 }
             }
         }
@@ -55,32 +60,28 @@ struct ContentView: View {
         .onAppear {
             pane = preferredDefaultPane
         }
+        .navigationBarBackButtonHidden()
     }
 
     private var toolbar: some ToolbarContent {
         Group {
-            ToolbarItem(placement: .navigationBarLeading) {
+            ToolbarItem(placement: .navigation) {
                 Picker("Pane", selection: $pane) {
                     ForEach(JensonViewerPane.allCases, id: \.hashValue) { paneCase in
+                        #if targetEnvironment(macCatalyst)
+                        Text(paneCase.rawValue)
+                            .tag(paneCase)
+                        #else
                         Label(paneCase.rawValue, systemImage: paneCase.systemImage)
                             .tag(paneCase)
+                        #endif
                     }
                 }
             }
+            #if !targetEnvironment(macCatalyst)
             ToolbarItem(placement: .primaryAction) {
                 Menu {
-                    Picker("Default View", selection: $preferredDefaultPane) {
-                        ForEach(JensonViewerPane.allCases, id: \.hashValue) { paneCase in
-                            Text(paneCase.rawValue).tag(paneCase)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    Toggle(isOn: $displayNarrator) {
-                        Label("Show Narrator Name", systemImage: "info.bubble")
-                    }
-                    Toggle(isOn: $hideMiscEvents) {
-                        Label("Hide Scripting Events", systemImage: "bell.slash.circle")
-                    }
+                    GutenbergSettingsMenu()
                     Button {
                         showAbout.toggle()
                     } label: {
@@ -90,6 +91,7 @@ struct ContentView: View {
                     Label("Settings", systemImage: "gear")
                 }
             }
+            #endif
         }
     }
 }

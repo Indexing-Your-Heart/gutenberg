@@ -59,6 +59,7 @@ struct GutenbergPreview: View {
             timeline = file.timeline
         }
         .toolbar {
+            #if !targetEnvironment(macCatalyst)
             ToolbarItem(id: "theme", placement: .secondaryAction) {
                 Menu {
                     JensonThemePicker()
@@ -72,6 +73,7 @@ struct GutenbergPreview: View {
                 }
                 .disabled(horizontalSizeClass == .compact)
             }
+            #endif
         }
         .toolbarRole(.editor)
     }

@@ -66,6 +66,7 @@ struct RunestoneEditor: UIViewRepresentable {
         textEditorView.backgroundColor = .systemBackground
         textEditorView.text = text.wrappedValue
         textEditorView.isFindInteractionEnabled = true
+        textEditorView.textContainerInset.left += 8
         setTextState(on: textEditorView)
         updateViewProperties(on: textEditorView)
         updateFindInteraction(on: textEditorView)

@@ -62,6 +62,8 @@ struct GutenbergDocumentContainer<WrappedContent: View>: View {
                     Label("Get Info", systemImage: "info.circle")
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
             .navigationDocument(
                 document,
                 preview: SharePreview(documentTitle, icon: documentImage)
@@ -74,10 +76,26 @@ struct GutenbergDocumentContainer<WrappedContent: View>: View {
                 contentType: .jenson,
                 onCompletion: handleFile
             )
+            .toolbar {
+                #if targetEnvironment(macCatalyst)
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        showProperties.toggle()
+                    } label: {
+                        Label("Get Info", systemImage: "info.circle")
+                            .font(.title3)
+                            .padding(.horizontal, 4)
+                    }
+                    .buttonStyle(.borderless)
+                    .tint(.secondary)
+                }
+                #endif
+            }
             .sheet(isPresented: $showProperties) {
                 NavigationStack {
                     JensonDocumentPropertiesView(document: $document)
                         .listRowSeparator(.hidden)
+                        .navigationBarBackButtonHidden()
                         .toolbar {
                             Button {
                                 showProperties = false
@@ -91,6 +109,9 @@ struct GutenbergDocumentContainer<WrappedContent: View>: View {
             .onAppear {
                 if document.readDecompressedFile { showDecompressionWarning.toggle() }
                 if let name = document.story?.name { documentTitle = name }
+                if let chapter = document.story?.chapter {
+                    documentTitle = "\(chapter) - \(documentTitle)"
+                }
                 Task {
                     await getDocumentImage()
                 }

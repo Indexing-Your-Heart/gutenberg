@@ -10,17 +10,40 @@
 //
 
 import SwiftUI
+import UIKit
 
 /// The main entry point of the app.
 @main
 struct GutenbergApp: App {
+    @State private var sourceModel = GutenbergSourceEditorViewModel()
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+
     var body: some Scene {
         DocumentGroup(newDocument: JensonDocument()) { file in
             ContentView(document: file.$document, fileURL: file.fileURL)
-                .navigationBarTitleDisplayMode(.inline)
+                .environmentObject(sourceModel)
+//                .navigationBarTitleDisplayMode(.inline)
         }
         .commands {
             TextEditingCommands()
+            CommandGroup(replacing: .textFormatting) { Text("Removed") }
+            GutenbergSourceEditorMenu(model: sourceModel)
+#if targetEnvironment(macCatalyst)
+            CommandGroup(after: .toolbar) {
+                Divider()
+                GutenbergSettingsMenu()
+                Divider()
+                JensonThemePicker()
+            }
+#endif
+        }
+    }
+}
+
+class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
+    override func buildMenu(with builder: UIMenuBuilder) {
+        if builder.system == .main {
+            builder.remove(menu: .format)
         }
     }
 }
