@@ -2,13 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ATSApplicationFontsPath</key>
-	<string>.</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeIconSystemGenerated</key>
-			<integer>1</integer>
 			<key>CFBundleTypeName</key>
 			<string>Jenson Dialogue File</string>
 			<key>CFBundleTypeRole</key>
@@ -27,10 +23,33 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>iAWriterMonoV.ttf</string>
-		<string>CrimsonText-Regular.ttf</string>
-		<string>CrimsonText-Bold.ttf</string>
 		<string>CrimsonText-Italic.ttf</string>
+		<string>CrimsonText-Bold.ttf</string>
+		<string>CrimsonText-Regular.ttf</string>
+		<string>iAWriterMonoV.ttf</string>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.content</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Jenson Dialogue File</string>
+			<key>UTTypeIconFiles</key>
+			<array/>
+			<key>UTTypeIdentifier</key>
+			<string>art.indexingyourhe.jenson</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>jenson</string>
+				</array>
+			</dict>
+		</dict>
 	</array>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
@@ -42,13 +61,8 @@
 			</array>
 			<key>UTTypeDescription</key>
 			<string>Jenson Dialogue File</string>
-			<key>UTTypeIcons</key>
-			<dict>
-				<key>UTTypeIconBadgeName</key>
-				<string>JensonFileTypeCenterImage</string>
-				<key>UTTypeIconText</key>
-				<string>Dialogue</string>
-			</dict>
+			<key>UTTypeIconFiles</key>
+			<array/>
 			<key>UTTypeIdentifier</key>
 			<string>art.indexingyourhe.jenson</string>
 			<key>UTTypeTagSpecification</key>
@@ -56,6 +70,25 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>jenson</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Markdown Text File</string>
+			<key>UTTypeIconFiles</key>
+			<array/>
+			<key>UTTypeIdentifier</key>
+			<string>art.indexingyourhe.markdown</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>md</string>
 				</array>
 			</dict>
 		</dict>

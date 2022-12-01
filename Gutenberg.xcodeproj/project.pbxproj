@@ -11,6 +11,7 @@
 		950DF31128DA0D5400C4D17A /* GutenbergAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DF31028DA0D5400C4D17A /* GutenbergAboutView.swift */; };
 		950DF31328DA12C600C4D17A /* Credits.md in Resources */ = {isa = PBXBuildFile; fileRef = 950DF31228DA12C600C4D17A /* Credits.md */; };
 		950DF31528DA19D100C4D17A /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DF31428DA19D100C4D17A /* UIApplication+Version.swift */; };
+		9519A8942937F773001C58C5 /* GutenbergDocumentContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519A8932937F773001C58C5 /* GutenbergDocumentContainerViewModel.swift */; };
 		95315F5728D8B2830079E831 /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95315F5628D8B2830079E831 /* Entrypoint.swift */; };
 		95315F5B28D8B2830079E831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95315F5A28D8B2830079E831 /* ContentView.swift */; };
 		95315F5D28D8B2840079E831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95315F5C28D8B2840079E831 /* Assets.xcassets */; };
@@ -19,14 +20,8 @@
 		95315F6928D8B3810079E831 /* JensonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95315F6828D8B3810079E831 /* JensonKit */; };
 		95315F6B28D8B3AC0079E831 /* String+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533177C28D4B53F00E6E516 /* String+AttributedString.swift */; };
 		95315F6C28D8B3AC0079E831 /* JensonFile+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97C828D656B40050B41A /* JensonFile+Dummy.swift */; };
-		95315F6E28D8B3E20079E831 /* JensonDocument+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95315F6D28D8B3E20079E831 /* JensonDocument+AppKit.swift */; };
 		95315F7128D8B5E90079E831 /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = 95315F7028D8B5E90079E831 /* Runestone */; };
 		95315F7428D8B6E60079E831 /* RunestoneEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95315F7328D8B6E60079E831 /* RunestoneEditor.swift */; };
-		9533177B28D4B1C400E6E516 /* iAWriterMonoV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9533177A28D4B1C400E6E516 /* iAWriterMonoV.ttf */; };
-		9533177D28D4B53F00E6E516 /* String+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533177C28D4B53F00E6E516 /* String+AttributedString.swift */; };
-		9533177F28D4B7ED00E6E516 /* CrimsonText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9533177E28D4B7ED00E6E516 /* CrimsonText-Regular.ttf */; };
-		9533178228D4BAC300E6E516 /* CrimsonText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9533178128D4BAA200E6E516 /* CrimsonText-Bold.ttf */; };
-		9533178428D4BBB300E6E516 /* CrimsonText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9533178328D4BBB300E6E516 /* CrimsonText-Italic.ttf */; };
 		9558462528D8BE21004EE8CD /* JensonDocumentPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */; };
 		9558462628D8BE74004EE8CD /* ListTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED128D8A25B00EF8827 /* ListTableRow.swift */; };
 		9558462D28D8E09F004EE8CD /* TreeSitterJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9558462C28D8E09F004EE8CD /* TreeSitterJSON */; };
@@ -51,45 +46,15 @@
 		9558464A28D8F496004EE8CD /* CrimsonText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9533178128D4BAA200E6E516 /* CrimsonText-Bold.ttf */; };
 		9558464C28D8F63E004EE8CD /* GutenbergPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */; };
 		9558464D28D8F744004EE8CD /* JensonThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED328D8A8ED00EF8827 /* JensonThemePicker.swift */; };
-		957B97C728D6530C0050B41A /* NSSavePanel+StringWriteable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97C628D6530C0050B41A /* NSSavePanel+StringWriteable.swift */; };
-		957B97C928D656B40050B41A /* JensonFile+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97C828D656B40050B41A /* JensonFile+Dummy.swift */; };
-		957B97CB28D660180050B41A /* FocusedValues+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97CA28D660180050B41A /* FocusedValues+Document.swift */; };
-		957B97CE28D661A40050B41A /* PreviewPreferenceCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97CD28D661A40050B41A /* PreviewPreferenceCommands.swift */; };
-		957B97D028D662690050B41A /* DebuggingCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97CF28D662690050B41A /* DebuggingCommands.swift */; };
-		957B97D228D66B2C0050B41A /* JensonFileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97D128D66B2C0050B41A /* JensonFileValidator.swift */; };
 		95874480290AC64B00397288 /* GutenbergSettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587447F290AC64B00397288 /* GutenbergSettingsMenu.swift */; };
 		95874482290ACA0E00397288 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 95874481290ACA0E00397288 /* Credits.rtf */; };
 		95874484290ACD0700397288 /* GutenbergSourceEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95874483290ACD0700397288 /* GutenbergSourceEditorViewModel.swift */; };
 		95874486290ACD9900397288 /* GutenbergSourceEditorMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95874485290ACD9900397288 /* GutenbergSourceEditorMenu.swift */; };
-		9597F90728CB744100A886E3 /* JensonDocumentPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */; };
-		9597F90A28CB76CD00A886E3 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 9597F90928CB76CD00A886E3 /* Introspect */; };
-		9597F90E28CB7DEE00A886E3 /* JensonSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F90D28CB7DEE00A886E3 /* JensonSettingsView.swift */; };
-		9597F91628CB898E00A886E3 /* JensonSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F91528CB898E00A886E3 /* JensonSourceView.swift */; };
-		9597F91D28CB907D00A886E3 /* JensonViewerPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F91C28CB907D00A886E3 /* JensonViewerPane.swift */; };
-		9597F91F28CB940F00A886E3 /* JensonFilePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F91E28CB940F00A886E3 /* JensonFilePreview.swift */; };
-		9597F92628CBAAD700A886E3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9597F92528CBAAD700A886E3 /* Credits.rtf */; };
-		9597F92828CBB0ED00A886E3 /* PreviewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F92728CBB0ED00A886E3 /* PreviewTheme.swift */; };
-		9597F92A28CBB4FA00A886E3 /* PreviewThemeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F92928CBB4FA00A886E3 /* PreviewThemeSelection.swift */; };
-		95AD1ED228D8A25B00EF8827 /* ListTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED128D8A25B00EF8827 /* ListTableRow.swift */; };
-		95AD1ED428D8A8ED00EF8827 /* JensonThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED328D8A8ED00EF8827 /* JensonThemePicker.swift */; };
-		95AD1ED628D8AA2D00EF8827 /* PaddedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED528D8AA2D00EF8827 /* PaddedHStack.swift */; };
-		95AD1ED828D8AB0300EF8827 /* JensonChoiceGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED728D8AB0300EF8827 /* JensonChoiceGroup.swift */; };
-		95AD1EDB28D8AB2F00EF8827 /* JensonRefreshEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1EDA28D8AB2F00EF8827 /* JensonRefreshEventCell.swift */; };
-		95AD1EDD28D8AC7500EF8827 /* JensonCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1EDC28D8AC7500EF8827 /* JensonCommentCell.swift */; };
-		95AD1EDF28D8ACE100EF8827 /* JensonDialogueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1EDE28D8ACE100EF8827 /* JensonDialogueCell.swift */; };
-		95AD1EE128D8AD4000EF8827 /* JensonQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1EE028D8AD4000EF8827 /* JensonQuestionCell.swift */; };
-		95B5D24E28CA747B00C7C07A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5D24D28CA747B00C7C07A /* Entrypoint.swift */; };
-		95B5D25028CA747B00C7C07A /* JensonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5D24F28CA747B00C7C07A /* JensonDocument.swift */; };
-		95B5D25228CA747B00C7C07A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5D25128CA747B00C7C07A /* ContentView.swift */; };
-		95B5D25428CA747D00C7C07A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B5D25328CA747D00C7C07A /* Assets.xcassets */; };
-		95B5D25728CA747D00C7C07A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B5D25628CA747D00C7C07A /* Preview Assets.xcassets */; };
-		95B5D26128CA757100C7C07A /* JensonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95B5D26028CA757100C7C07A /* JensonKit */; };
-		95B5D26328CA7D9900C7C07A /* JensonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5D26228CA7D9900C7C07A /* JensonCellView.swift */; };
+		958D71B9293934B9001020FF /* GutenbergPaneSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D71B8293934B9001020FF /* GutenbergPaneSwitcher.swift */; };
+		95A9B0F22937C3CC00A316BE /* Marteau in Frameworks */ = {isa = PBXBuildFile; productRef = 95A9B0F12937C3CC00A316BE /* Marteau */; };
 		95D75D3D28DA416000062587 /* GutenbergDocumentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */; };
 		95D75D4028DA446000062587 /* ModifiedDefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */; };
 		95D75D4228DA448E00062587 /* RunestoneEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D4128DA448E00062587 /* RunestoneEditorDelegate.swift */; };
-		95DB209B28CFB5FF0079D624 /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 95DB209A28CFB5FF0079D624 /* CodeEditorView */; };
-		95F6E18D28D4DEB300CD9FFB /* FileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6E18C28D4DEB300CD9FFB /* FileValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,14 +62,14 @@
 		950DF31028DA0D5400C4D17A /* GutenbergAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergAboutView.swift; sourceTree = "<group>"; };
 		950DF31228DA12C600C4D17A /* Credits.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Credits.md; sourceTree = "<group>"; };
 		950DF31428DA19D100C4D17A /* UIApplication+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
-		950DF31628DA297400C4D17A /* Gutenberg (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gutenberg (iOS).entitlements"; sourceTree = "<group>"; };
+		950DF31628DA297400C4D17A /* Gutenberg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gutenberg.entitlements; sourceTree = "<group>"; };
+		9519A8932937F773001C58C5 /* GutenbergDocumentContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergDocumentContainerViewModel.swift; sourceTree = "<group>"; };
 		95315F5428D8B2830079E831 /* Gutenberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gutenberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95315F5628D8B2830079E831 /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		95315F5A28D8B2830079E831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95315F5C28D8B2840079E831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95315F5F28D8B2840079E831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95315F6128D8B2840079E831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95315F6D28D8B3E20079E831 /* JensonDocument+AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JensonDocument+AppKit.swift"; sourceTree = "<group>"; };
 		95315F7328D8B6E60079E831 /* RunestoneEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditor.swift; sourceTree = "<group>"; };
 		9533177A28D4B1C400E6E516 /* iAWriterMonoV.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iAWriterMonoV.ttf; sourceTree = "<group>"; };
 		9533177C28D4B53F00E6E516 /* String+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AttributedString.swift"; sourceTree = "<group>"; };
@@ -117,22 +82,14 @@
 		9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergPreview.swift; sourceTree = "<group>"; };
 		9569158C28DB460A000D3D8F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9569158D28DB47DF000D3D8F /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		957B97C628D6530C0050B41A /* NSSavePanel+StringWriteable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSavePanel+StringWriteable.swift"; sourceTree = "<group>"; };
 		957B97C828D656B40050B41A /* JensonFile+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JensonFile+Dummy.swift"; sourceTree = "<group>"; };
-		957B97CA28D660180050B41A /* FocusedValues+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FocusedValues+Document.swift"; sourceTree = "<group>"; };
-		957B97CD28D661A40050B41A /* PreviewPreferenceCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPreferenceCommands.swift; sourceTree = "<group>"; };
-		957B97CF28D662690050B41A /* DebuggingCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingCommands.swift; sourceTree = "<group>"; };
-		957B97D128D66B2C0050B41A /* JensonFileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonFileValidator.swift; sourceTree = "<group>"; };
 		9587447F290AC64B00397288 /* GutenbergSettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSettingsMenu.swift; sourceTree = "<group>"; };
 		95874481290ACA0E00397288 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		95874483290ACD0700397288 /* GutenbergSourceEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSourceEditorViewModel.swift; sourceTree = "<group>"; };
 		95874485290ACD9900397288 /* GutenbergSourceEditorMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSourceEditorMenu.swift; sourceTree = "<group>"; };
+		958D71B8293934B9001020FF /* GutenbergPaneSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergPaneSwitcher.swift; sourceTree = "<group>"; };
 		9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonDocumentPropertiesView.swift; sourceTree = "<group>"; };
-		9597F90D28CB7DEE00A886E3 /* JensonSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonSettingsView.swift; sourceTree = "<group>"; };
-		9597F91528CB898E00A886E3 /* JensonSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonSourceView.swift; sourceTree = "<group>"; };
 		9597F91C28CB907D00A886E3 /* JensonViewerPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonViewerPane.swift; sourceTree = "<group>"; };
-		9597F91E28CB940F00A886E3 /* JensonFilePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonFilePreview.swift; sourceTree = "<group>"; };
-		9597F92528CBAAD700A886E3 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		9597F92728CBB0ED00A886E3 /* PreviewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTheme.swift; sourceTree = "<group>"; };
 		9597F92928CBB4FA00A886E3 /* PreviewThemeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewThemeSelection.swift; sourceTree = "<group>"; };
 		95AD1ED128D8A25B00EF8827 /* ListTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableRow.swift; sourceTree = "<group>"; };
@@ -143,19 +100,11 @@
 		95AD1EDC28D8AC7500EF8827 /* JensonCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonCommentCell.swift; sourceTree = "<group>"; };
 		95AD1EDE28D8ACE100EF8827 /* JensonDialogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonDialogueCell.swift; sourceTree = "<group>"; };
 		95AD1EE028D8AD4000EF8827 /* JensonQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonQuestionCell.swift; sourceTree = "<group>"; };
-		95B5D24A28CA747B00C7C07A /* Gutenberg Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gutenberg Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		95B5D24D28CA747B00C7C07A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		95B5D24F28CA747B00C7C07A /* JensonDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonDocument.swift; sourceTree = "<group>"; };
-		95B5D25128CA747B00C7C07A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		95B5D25328CA747D00C7C07A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95B5D25628CA747D00C7C07A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95B5D25828CA747D00C7C07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95B5D25928CA747D00C7C07A /* Gutenberg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gutenberg.entitlements; sourceTree = "<group>"; };
 		95B5D26228CA7D9900C7C07A /* JensonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonCellView.swift; sourceTree = "<group>"; };
 		95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergDocumentContainer.swift; sourceTree = "<group>"; };
 		95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedDefaultTheme.swift; sourceTree = "<group>"; };
 		95D75D4128DA448E00062587 /* RunestoneEditorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditorDelegate.swift; sourceTree = "<group>"; };
-		95F6E18C28D4DEB300CD9FFB /* FileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,16 +118,7 @@
 				9558463328D8E158004EE8CD /* TreeSitterLanguagesCommon in Frameworks */,
 				95315F6928D8B3810079E831 /* JensonKit in Frameworks */,
 				9558463128D8E0AC004EE8CD /* TreeSitterJSONRunestone in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95B5D24728CA747B00C7C07A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95DB209B28CFB5FF0079D624 /* CodeEditorView in Frameworks */,
-				95B5D26128CA757100C7C07A /* JensonKit in Frameworks */,
-				9597F90A28CB76CD00A886E3 /* Introspect in Frameworks */,
+				95A9B0F22937C3CC00A316BE /* Marteau in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,29 +128,30 @@
 		950DF30D28DA077C00C4D17A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9558464028D8E368004EE8CD /* JensonDocument+Transferable.swift */,
+				9533177C28D4B53F00E6E516 /* String+AttributedString.swift */,
 				950DF30E28DA079200C4D17A /* TextView+Convenience.swift */,
 				950DF31428DA19D100C4D17A /* UIApplication+Version.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		95315F5528D8B2830079E831 /* Gutenberg (iOS) */ = {
+		95315F5528D8B2830079E831 /* Gutenberg */ = {
 			isa = PBXGroup;
 			children = (
-				95874487290AD89F00397288 /* View Models */,
-				95874481290ACA0E00397288 /* Credits.rtf */,
-				950DF31628DA297400C4D17A /* Gutenberg (iOS).entitlements */,
+				958D71B729393344001020FF /* Bootstrapping */,
+				958D71B62939332B001020FF /* Preferences */,
+				958D71B4293932FD001020FF /* Document Management */,
+				958D71B3293932C8001020FF /* Document Container */,
+				9558462428D8BE16004EE8CD /* Components */,
+				9558463428D8E1F5004EE8CD /* Theming */,
+				958D71B229393295001020FF /* Preview */,
+				958D71B129393274001020FF /* Source Editor */,
+				950DF31628DA297400C4D17A /* Gutenberg.entitlements */,
 				950DF30D28DA077C00C4D17A /* Extensions */,
-				95315F7228D8B6D10079E831 /* Views */,
-				95315F5628D8B2830079E831 /* Entrypoint.swift */,
-				95315F5A28D8B2830079E831 /* ContentView.swift */,
-				95315F5C28D8B2840079E831 /* Assets.xcassets */,
 				95315F6128D8B2840079E831 /* Info.plist */,
 				95315F5E28D8B2840079E831 /* Preview Content */,
-				950DF31228DA12C600C4D17A /* Credits.md */,
 			);
-			path = "Gutenberg (iOS)";
+			path = Gutenberg;
 			sourceTree = "<group>";
 		};
 		95315F5E28D8B2840079E831 /* Preview Content */ = {
@@ -221,54 +162,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		95315F6528D8B2F30079E831 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				9533178028D4BA5500E6E516 /* Fonts */,
-				9558463428D8E1F5004EE8CD /* Theming */,
-				9558462428D8BE16004EE8CD /* Views */,
-				9597F91B28CB906400A886E3 /* Enums */,
-				95315F6A28D8B39B0079E831 /* Extensions */,
-				95B5D24F28CA747B00C7C07A /* JensonDocument.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		95315F6728D8B3810079E831 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		95315F6A28D8B39B0079E831 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				957B97C828D656B40050B41A /* JensonFile+Dummy.swift */,
-				9533177C28D4B53F00E6E516 /* String+AttributedString.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		95315F7228D8B6D10079E831 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				95874488290AD8AA00397288 /* Menus */,
-				95D75D3E28DA444800062587 /* Bridging */,
-				95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */,
-				9558463E28D8E274004EE8CD /* GutenbergSourceView.swift */,
-				9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */,
-				950DF31028DA0D5400C4D17A /* GutenbergAboutView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9533177928D4B09E00E6E516 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				95B5D25328CA747D00C7C07A /* Assets.xcassets */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		9533178028D4BA5500E6E516 /* Fonts */ = {
@@ -282,15 +180,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		9558462428D8BE16004EE8CD /* Views */ = {
+		9558462428D8BE16004EE8CD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				95AD1ED928D8AB1B00EF8827 /* Cells */,
 				95AD1ED528D8AA2D00EF8827 /* PaddedHStack.swift */,
 				95AD1ED128D8A25B00EF8827 /* ListTableRow.swift */,
-				9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */,
 			);
-			path = Views;
+			name = Components;
+			path = ../Shared/Components;
 			sourceTree = "<group>";
 		};
 		9558463428D8E1F5004EE8CD /* Theming */ = {
@@ -303,67 +200,76 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
-		957B97CC28D661910050B41A /* Commands */ = {
+		958D71B129393274001020FF /* Source Editor */ = {
 			isa = PBXGroup;
 			children = (
-				957B97CD28D661A40050B41A /* PreviewPreferenceCommands.swift */,
-				957B97CF28D662690050B41A /* DebuggingCommands.swift */,
-			);
-			path = Commands;
-			sourceTree = "<group>";
-		};
-		957B97D328D66EF40050B41A /* Documents */ = {
-			isa = PBXGroup;
-			children = (
-				95F6E18C28D4DEB300CD9FFB /* FileValidator.swift */,
-				957B97D128D66B2C0050B41A /* JensonFileValidator.swift */,
-			);
-			path = Documents;
-			sourceTree = "<group>";
-		};
-		95874487290AD89F00397288 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
+				95D75D3E28DA444800062587 /* Runestone */,
+				95874485290ACD9900397288 /* GutenbergSourceEditorMenu.swift */,
+				9558463E28D8E274004EE8CD /* GutenbergSourceView.swift */,
 				95874483290ACD0700397288 /* GutenbergSourceEditorViewModel.swift */,
 			);
-			path = "View Models";
+			path = "Source Editor";
 			sourceTree = "<group>";
 		};
-		95874488290AD8AA00397288 /* Menus */ = {
+		958D71B229393295001020FF /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				9587447F290AC64B00397288 /* GutenbergSettingsMenu.swift */,
-				95874485290ACD9900397288 /* GutenbergSourceEditorMenu.swift */,
+				95AD1ED928D8AB1B00EF8827 /* Cells */,
+				9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */,
 			);
-			path = Menus;
+			path = Preview;
 			sourceTree = "<group>";
 		};
-		9597F90228CB718C00A886E3 /* Extensions */ = {
+		958D71B3293932C8001020FF /* Document Container */ = {
 			isa = PBXGroup;
 			children = (
-				957B97C628D6530C0050B41A /* NSSavePanel+StringWriteable.swift */,
-				957B97CA28D660180050B41A /* FocusedValues+Document.swift */,
-				95315F6D28D8B3E20079E831 /* JensonDocument+AppKit.swift */,
+				958D71B8293934B9001020FF /* GutenbergPaneSwitcher.swift */,
+				9597F91C28CB907D00A886E3 /* JensonViewerPane.swift */,
+				95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */,
+				9519A8932937F773001C58C5 /* GutenbergDocumentContainerViewModel.swift */,
+			);
+			path = "Document Container";
+			sourceTree = "<group>";
+		};
+		958D71B4293932FD001020FF /* Document Management */ = {
+			isa = PBXGroup;
+			children = (
+				958D71B529393311001020FF /* Extensions */,
+				95B5D24F28CA747B00C7C07A /* JensonDocument.swift */,
+			);
+			path = "Document Management";
+			sourceTree = "<group>";
+		};
+		958D71B529393311001020FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				957B97C828D656B40050B41A /* JensonFile+Dummy.swift */,
+				9558464028D8E368004EE8CD /* JensonDocument+Transferable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9597F90528CB742F00A886E3 /* Views */ = {
+		958D71B62939332B001020FF /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				9597F90D28CB7DEE00A886E3 /* JensonSettingsView.swift */,
-				9597F91528CB898E00A886E3 /* JensonSourceView.swift */,
-				9597F91E28CB940F00A886E3 /* JensonFilePreview.swift */,
+				9533178028D4BA5500E6E516 /* Fonts */,
+				950DF31228DA12C600C4D17A /* Credits.md */,
+				95874481290ACA0E00397288 /* Credits.rtf */,
+				950DF31028DA0D5400C4D17A /* GutenbergAboutView.swift */,
+				9587447F290AC64B00397288 /* GutenbergSettingsMenu.swift */,
+				9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */,
 			);
-			path = Views;
+			path = Preferences;
 			sourceTree = "<group>";
 		};
-		9597F91B28CB906400A886E3 /* Enums */ = {
+		958D71B729393344001020FF /* Bootstrapping */ = {
 			isa = PBXGroup;
 			children = (
-				9597F91C28CB907D00A886E3 /* JensonViewerPane.swift */,
+				95315F5C28D8B2840079E831 /* Assets.xcassets */,
+				95315F5628D8B2830079E831 /* Entrypoint.swift */,
+				95315F5A28D8B2830079E831 /* ContentView.swift */,
 			);
-			path = Enums;
+			path = Bootstrapping;
 			sourceTree = "<group>";
 		};
 		95AD1ED928D8AB1B00EF8827 /* Cells */ = {
@@ -385,9 +291,7 @@
 				953CC65F28DB5A790038853A /* CHANGELOG.md */,
 				9569158C28DB460A000D3D8F /* README.md */,
 				9569158D28DB47DF000D3D8F /* LICENSE.md */,
-				95315F6528D8B2F30079E831 /* Shared */,
-				95B5D24C28CA747B00C7C07A /* Gutenberg */,
-				95315F5528D8B2830079E831 /* Gutenberg (iOS) */,
+				95315F5528D8B2830079E831 /* Gutenberg */,
 				95B5D24B28CA747B00C7C07A /* Products */,
 				95315F6728D8B3810079E831 /* Frameworks */,
 			);
@@ -396,46 +300,19 @@
 		95B5D24B28CA747B00C7C07A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95B5D24A28CA747B00C7C07A /* Gutenberg Mac.app */,
 				95315F5428D8B2830079E831 /* Gutenberg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95B5D24C28CA747B00C7C07A /* Gutenberg */ = {
-			isa = PBXGroup;
-			children = (
-				9533177928D4B09E00E6E516 /* Assets */,
-				957B97CC28D661910050B41A /* Commands */,
-				957B97D328D66EF40050B41A /* Documents */,
-				9597F90228CB718C00A886E3 /* Extensions */,
-				95B5D25528CA747D00C7C07A /* Preview Content */,
-				9597F90528CB742F00A886E3 /* Views */,
-				95B5D25128CA747B00C7C07A /* ContentView.swift */,
-				95B5D24D28CA747B00C7C07A /* Entrypoint.swift */,
-				9597F92528CBAAD700A886E3 /* Credits.rtf */,
-				95B5D25828CA747D00C7C07A /* Info.plist */,
-				95B5D25928CA747D00C7C07A /* Gutenberg.entitlements */,
-			);
-			path = Gutenberg;
-			sourceTree = "<group>";
-		};
-		95B5D25528CA747D00C7C07A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				95B5D25628CA747D00C7C07A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		95D75D3E28DA444800062587 /* Bridging */ = {
+		95D75D3E28DA444800062587 /* Runestone */ = {
 			isa = PBXGroup;
 			children = (
 				95315F7328D8B6E60079E831 /* RunestoneEditor.swift */,
 				95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */,
 				95D75D4128DA448E00062587 /* RunestoneEditorDelegate.swift */,
 			);
-			path = Bridging;
+			path = Runestone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,32 +339,10 @@
 				9558463028D8E0AC004EE8CD /* TreeSitterJSONRunestone */,
 				9558463228D8E158004EE8CD /* TreeSitterLanguagesCommon */,
 				9558464428D8EB4B004EE8CD /* Introspect */,
+				95A9B0F12937C3CC00A316BE /* Marteau */,
 			);
 			productName = "Gutenberg (iOS)";
 			productReference = 95315F5428D8B2830079E831 /* Gutenberg.app */;
-			productType = "com.apple.product-type.application";
-		};
-		95B5D24928CA747B00C7C07A /* Gutenberg Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95B5D25C28CA747D00C7C07A /* Build configuration list for PBXNativeTarget "Gutenberg Mac" */;
-			buildPhases = (
-				9569158F28DB4B59000D3D8F /* Run SwiftLint */,
-				95B5D24628CA747B00C7C07A /* Sources */,
-				95B5D24728CA747B00C7C07A /* Frameworks */,
-				95B5D24828CA747B00C7C07A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Gutenberg Mac";
-			packageProductDependencies = (
-				95B5D26028CA757100C7C07A /* JensonKit */,
-				9597F90928CB76CD00A886E3 /* Introspect */,
-				95DB209A28CFB5FF0079D624 /* CodeEditorView */,
-			);
-			productName = "Jenson Visualizer";
-			productReference = 95B5D24A28CA747B00C7C07A /* Gutenberg Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -502,9 +357,6 @@
 				TargetAttributes = {
 					95315F5328D8B2830079E831 = {
 						CreatedOnToolsVersion = 14.0.1;
-					};
-					95B5D24928CA747B00C7C07A = {
-						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
@@ -523,12 +375,12 @@
 				95DB209928CFB5FF0079D624 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
 				95315F6F28D8B5E90079E831 /* XCRemoteSwiftPackageReference "Runestone" */,
 				9558462728D8E067004EE8CD /* XCRemoteSwiftPackageReference "treesitterlanguages" */,
+				95A9B0F02937C3CC00A316BE /* XCRemoteSwiftPackageReference "marteau" */,
 			);
 			productRefGroup = 95B5D24B28CA747B00C7C07A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95B5D24928CA747B00C7C07A /* Gutenberg Mac */,
 				95315F5328D8B2830079E831 /* Gutenberg */,
 			);
 		};
@@ -550,43 +402,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95B5D24828CA747B00C7C07A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9533178228D4BAC300E6E516 /* CrimsonText-Bold.ttf in Resources */,
-				9533178428D4BBB300E6E516 /* CrimsonText-Italic.ttf in Resources */,
-				95B5D25728CA747D00C7C07A /* Preview Assets.xcassets in Resources */,
-				95B5D25428CA747D00C7C07A /* Assets.xcassets in Resources */,
-				9597F92628CBAAD700A886E3 /* Credits.rtf in Resources */,
-				9533177B28D4B1C400E6E516 /* iAWriterMonoV.ttf in Resources */,
-				9533177F28D4B7ED00E6E516 /* CrimsonText-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		9569158E28DB4B25000D3D8F /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		9569158F28DB4B59000D3D8F /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -613,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9558463A28D8E252004EE8CD /* JensonDialogueCell.swift in Sources */,
+				958D71B9293934B9001020FF /* GutenbergPaneSwitcher.swift in Sources */,
 				9558463628D8E206004EE8CD /* PreviewTheme.swift in Sources */,
 				950DF30F28DA079200C4D17A /* TextView+Convenience.swift in Sources */,
 				9558463C28D8E252004EE8CD /* JensonCommentCell.swift in Sources */,
@@ -630,6 +450,7 @@
 				9558464D28D8F744004EE8CD /* JensonThemePicker.swift in Sources */,
 				95315F5728D8B2830079E831 /* Entrypoint.swift in Sources */,
 				9558463D28D8E252004EE8CD /* JensonCellView.swift in Sources */,
+				9519A8942937F773001C58C5 /* GutenbergDocumentContainerViewModel.swift in Sources */,
 				95315F6B28D8B3AC0079E831 /* String+AttributedString.swift in Sources */,
 				9558463728D8E239004EE8CD /* PaddedHStack.swift in Sources */,
 				95874486290ACD9900397288 /* GutenbergSourceEditorMenu.swift in Sources */,
@@ -646,41 +467,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95B5D24628CA747B00C7C07A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				957B97CB28D660180050B41A /* FocusedValues+Document.swift in Sources */,
-				9597F92A28CBB4FA00A886E3 /* PreviewThemeSelection.swift in Sources */,
-				95315F6E28D8B3E20079E831 /* JensonDocument+AppKit.swift in Sources */,
-				9533177D28D4B53F00E6E516 /* String+AttributedString.swift in Sources */,
-				957B97CE28D661A40050B41A /* PreviewPreferenceCommands.swift in Sources */,
-				95F6E18D28D4DEB300CD9FFB /* FileValidator.swift in Sources */,
-				95AD1EDD28D8AC7500EF8827 /* JensonCommentCell.swift in Sources */,
-				9597F91628CB898E00A886E3 /* JensonSourceView.swift in Sources */,
-				957B97C728D6530C0050B41A /* NSSavePanel+StringWriteable.swift in Sources */,
-				95AD1EDF28D8ACE100EF8827 /* JensonDialogueCell.swift in Sources */,
-				95AD1ED828D8AB0300EF8827 /* JensonChoiceGroup.swift in Sources */,
-				957B97C928D656B40050B41A /* JensonFile+Dummy.swift in Sources */,
-				957B97D028D662690050B41A /* DebuggingCommands.swift in Sources */,
-				9597F90728CB744100A886E3 /* JensonDocumentPropertiesView.swift in Sources */,
-				9597F92828CBB0ED00A886E3 /* PreviewTheme.swift in Sources */,
-				95AD1EE128D8AD4000EF8827 /* JensonQuestionCell.swift in Sources */,
-				95B5D24E28CA747B00C7C07A /* Entrypoint.swift in Sources */,
-				9597F91D28CB907D00A886E3 /* JensonViewerPane.swift in Sources */,
-				95AD1ED428D8A8ED00EF8827 /* JensonThemePicker.swift in Sources */,
-				95AD1ED228D8A25B00EF8827 /* ListTableRow.swift in Sources */,
-				95B5D25028CA747B00C7C07A /* JensonDocument.swift in Sources */,
-				9597F90E28CB7DEE00A886E3 /* JensonSettingsView.swift in Sources */,
-				95AD1ED628D8AA2D00EF8827 /* PaddedHStack.swift in Sources */,
-				95B5D25228CA747B00C7C07A /* ContentView.swift in Sources */,
-				9597F91F28CB940F00A886E3 /* JensonFilePreview.swift in Sources */,
-				95AD1EDB28D8AB2F00EF8827 /* JensonRefreshEventCell.swift in Sources */,
-				95B5D26328CA7D9900C7C07A /* JensonCellView.swift in Sources */,
-				957B97D228D66B2C0050B41A /* JensonFileValidator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -689,15 +475,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Gutenberg (iOS)/Gutenberg (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = Gutenberg/Gutenberg.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg (iOS)/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg/Preview Content\"";
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gutenberg (iOS)/Info.plist";
+				INFOPLIST_FILE = Gutenberg/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gutenberg;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
@@ -732,15 +518,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Gutenberg (iOS)/Gutenberg (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = Gutenberg/Gutenberg.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg (iOS)/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg/Preview Content\"";
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gutenberg (iOS)/Info.plist";
+				INFOPLIST_FILE = Gutenberg/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gutenberg;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
@@ -886,70 +672,6 @@
 			};
 			name = Release;
 		};
-		95B5D25D28CA747D00C7C07A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Gutenberg/Gutenberg.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg/Preview Content\"";
-				DEVELOPMENT_TEAM = FQQXSP79X3;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Gutenberg/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Gutenberg;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "(C) 2022 Marquis Kurt.";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = art.indexingyourhe.gutenberg;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		95B5D25E28CA747D00C7C07A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Gutenberg/Gutenberg.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg/Preview Content\"";
-				DEVELOPMENT_TEAM = FQQXSP79X3;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Gutenberg/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Gutenberg;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "(C) 2022 Marquis Kurt.";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = art.indexingyourhe.gutenberg;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -967,15 +689,6 @@
 			buildConfigurations = (
 				95B5D25A28CA747D00C7C07A /* Debug */,
 				95B5D25B28CA747D00C7C07A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		95B5D25C28CA747D00C7C07A /* Build configuration list for PBXNativeTarget "Gutenberg Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				95B5D25D28CA747D00C7C07A /* Debug */,
-				95B5D25E28CA747D00C7C07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1005,6 +718,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.1.4;
+			};
+		};
+		95A9B0F02937C3CC00A316BE /* XCRemoteSwiftPackageReference "marteau" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Indexing-Your-Heart/marteau";
+			requirement = {
+				branch = root;
+				kind = branch;
 			};
 		};
 		95B5D25F28CA757100C7C07A /* XCRemoteSwiftPackageReference "JensonKit" */ = {
@@ -1056,20 +777,10 @@
 			package = 9597F90828CB76CD00A886E3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
 		};
-		9597F90928CB76CD00A886E3 /* Introspect */ = {
+		95A9B0F12937C3CC00A316BE /* Marteau */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9597F90828CB76CD00A886E3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-		95B5D26028CA757100C7C07A /* JensonKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95B5D25F28CA757100C7C07A /* XCRemoteSwiftPackageReference "JensonKit" */;
-			productName = JensonKit;
-		};
-		95DB209A28CFB5FF0079D624 /* CodeEditorView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95DB209928CFB5FF0079D624 /* XCRemoteSwiftPackageReference "CodeEditorView" */;
-			productName = CodeEditorView;
+			package = 95A9B0F02937C3CC00A316BE /* XCRemoteSwiftPackageReference "marteau" */;
+			productName = Marteau;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
