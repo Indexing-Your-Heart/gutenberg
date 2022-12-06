@@ -15,7 +15,7 @@ import SwiftUI
 /// A view that acts as a wrapper around a document.
 struct GutenbergDocumentContainer<WrappedContent: View>: View {
     @ObservedObject var documentVM: GutenbergDocumentContainerViewModel
-    var wrappedContent: (Binding<JensonDocument>) -> WrappedContent
+    var wrappedContent: (Binding<GutenbergDocument>) -> WrappedContent
 
     private var documentImageView: some View {
         Image(systemName: "text.book.closed.fill")
@@ -38,11 +38,6 @@ struct GutenbergDocumentContainer<WrappedContent: View>: View {
                 } label: {
                     Label(documentVM.getExportNameAction(), systemImage: "plus.square.on.square")
                 }
-                Button {
-                    documentVM.showPropertiesWindow.toggle()
-                } label: {
-                    Label("Get Info", systemImage: "info.circle")
-                }
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationDocument(
@@ -57,36 +52,6 @@ struct GutenbergDocumentContainer<WrappedContent: View>: View {
                 defaultFilename: documentVM.getDocumentTitleForExport(),
                 onCompletion: handleFile
             )
-            .toolbar {
-                #if targetEnvironment(macCatalyst)
-                ToolbarItem(placement: .primaryAction) {
-                    Button {
-                        documentVM.showPropertiesWindow.toggle()
-                    } label: {
-                        Label("Get Info", systemImage: "info.circle")
-                            .font(.title3)
-                            .padding(.horizontal, 4)
-                    }
-                    .buttonStyle(.borderless)
-                    .tint(.secondary)
-                }
-                #endif
-            }
-            .sheet(isPresented: $documentVM.showPropertiesWindow) {
-                NavigationStack {
-                    JensonDocumentPropertiesView(document: documentVM.document)
-                        .toolbarRole(.navigationStack)
-                        .listRowSeparator(.hidden)
-                        .toolbar {
-                            Button {
-                                documentVM.hidePropertiesWindow()
-                            } label: {
-                                Text("Done")
-                            }
-                        }
-                }
-                .presentationDetents([.medium, .large])
-            }
             .onAppear {
                 Task {
                     await getDocumentImage()

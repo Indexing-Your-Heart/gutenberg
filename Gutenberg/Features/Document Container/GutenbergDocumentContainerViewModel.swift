@@ -14,7 +14,7 @@ import Combine
 
 class GutenbergDocumentContainerViewModel: ObservableObject {
     /// A binding to the document that the container will access.
-    @Published var document: Binding<JensonDocument>
+    @Published var document: Binding<GutenbergDocument>
 
     /// The document's file URL. Used for renaming and duplicating files.
     @Published var fileURL: URL?
@@ -51,7 +51,7 @@ class GutenbergDocumentContainerViewModel: ObservableObject {
     private var didDisplayDecompressedWarning = false
     private var didDisplayMarkdownWarning = false
 
-    init(with document: Binding<JensonDocument>, at path: URL?) {
+    init(with document: Binding<GutenbergDocument>, at path: URL?) {
         self.document = document
         self.fileURL = path
 

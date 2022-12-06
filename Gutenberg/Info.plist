@@ -19,6 +19,19 @@
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER).jenson-document</string>
 		</dict>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>art.indexingyourhe.gutenberg</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>gutenberg://</string>
+			</array>
+		</dict>
+	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>UIAppFonts</key>
@@ -83,7 +96,7 @@
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>art.indexingyourhe.markdown</string>
+			<string>com.daringfireball.markdown</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

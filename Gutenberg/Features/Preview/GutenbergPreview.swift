@@ -22,8 +22,11 @@ struct GutenbergPreview: View {
     /// The user's preferred preview theme.
     @AppStorage("preview-theme") private var theme = PreviewThemeSelection.manuscript
 
+    /// Whether to display the outline in the preview.
+    @AppStorage("display-preview-outline") private var displayOutline = false
+
     /// A binding to the document that will be previewed.
-    @Binding var document: JensonDocument
+    @Binding var document: GutenbergDocument
 
     /// Whether the preview should take the full space of the device. Defaults to false.
     @State private var useFullWidth = false
@@ -31,29 +34,53 @@ struct GutenbergPreview: View {
     /// A list of timeline events.
     @State private var timeline: [JensonEvent] = []
 
+    @State private var currentID: String = ""
+
     var body: some View {
         GeometryReader { proxy in
-            ScrollView {
-                ZStack {
-                    projectedBackground
-                    VStack(alignment: .leading) {
-                        ForEach(timeline) { event in
-                            JensonCellView(event: event)
-                                .foregroundColor(theme.theme.textColor)
-                                .font(theme.theme.fontStyle)
-                                .padding(10)
+            ScrollViewReader { scrollProxy in
+                HStack(spacing: 0) {
+                    Group {
+                        if displayOutline, horizontalSizeClass == .regular {
+                            GutenbergPreviewOutline(currentID: $currentID, timeline: timeline)
+                                .listStyle(.sidebar)
+                            Divider()
                         }
                     }
-                    .padding(.top)
-                    .frame(
-                        maxWidth: useFullWidth || horizontalSizeClass == .compact ? .infinity : proxy.size.width * 0.75
-                    )
+                    ScrollView {
+                        ZStack {
+                            projectedBackground
+                            VStack(alignment: .leading) {
+                                ForEach(timeline) { event in
+                                    JensonCellView(event: event)
+                                        .foregroundColor(theme.theme.textColor)
+                                        .font(theme.theme.fontStyle)
+                                        .padding(10)
+                                        .id(event.id.uuidString)
+                                }
+                            }
+                            .padding(.top)
+                            .frame(
+                                maxWidth: useFullWidth || horizontalSizeClass == .compact
+                                    ? .infinity : proxy.size.width * 0.75
+                            )
+                        }
+                    }
+                    .onChange(of: currentID) { newValue in
+                        if !newValue.isEmpty {
+                            withAnimation { scrollProxy.scrollTo(newValue, anchor: .top) }
+                        }
+                    }
                 }
             }
+
         }
+        .toolbarBackground(displayOutline ? .visible : .automatic, for: .navigationBar)
+        .toolbarBackground(displayOutline ? .ultraThickMaterial : .regularMaterial, for: .navigationBar)
         .background(projectedBackground.edgesIgnoringSafeArea(.all))
         .animation(.easeInOut, value: theme)
         .animation(.easeInOut, value: useFullWidth)
+        .animation(.easeInOut, value: displayOutline)
         .onAppear {
             let file = document.updateRepresentationToContents() ?? document.content
             timeline = file.timeline
@@ -71,7 +98,7 @@ struct GutenbergPreview: View {
                 Toggle(isOn: $useFullWidth) {
                     Label("Fill Available Space", systemImage: "arrow.left.and.right.square")
                 }
-                .disabled(horizontalSizeClass == .compact)
+                .disabled(horizontalSizeClass == .compact || displayOutline)
             }
             #endif
         }

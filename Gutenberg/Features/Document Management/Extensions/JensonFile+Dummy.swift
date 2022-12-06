@@ -13,14 +13,18 @@ import Foundation
 import JensonKit
 
 extension JensonFile {
+    static var authorName: String {
+        UserDefaults.standard.string(forKey: "new-document-name") ?? NSFullUserName()
+    }
+
     /// A template file used during new file creation.
     static var template = JensonFile(
         version: 2,
         application: .init(name: "Gutenberg"),
         story: .init(
             name: "Untitled Story",
-            author: NSFullUserName(),
-            copyright: "(C) \(Calendar.current.component(.year, from: .now)) \(NSFullUserName()). All rights reserved."
+            author: authorName,
+            copyright: "(C) \(Calendar.current.component(.year, from: .now)) \(authorName). All rights reserved."
         ),
         timeline: [
             .init(type: .comment, who: "", what: "This is a comment.", question: nil),

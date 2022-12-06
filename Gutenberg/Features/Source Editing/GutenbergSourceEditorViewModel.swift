@@ -27,4 +27,27 @@ class GutenbergSourceEditorViewModel: ObservableObject {
 
     /// Whether line wrapping is enabled.
     @Published var lineWrapping = true
+
+    /// The current find and replace state.
+    @Published var findNavigationState = RunestoneEditor.FindInteractionStyle.disabled
+
+    func increaseFontSize() {
+        fontSize += 1
+    }
+
+    func decreaseFontSize() {
+        fontSize -= 1
+    }
+
+    func resetFontSize() {
+        fontSize = 13
+    }
+
+    func increaseLineSpacing() {
+        lineSpacing = max(1.0, lineSpacing + 0.25)
+    }
+
+    func decreaseLineSpacing() {
+        lineSpacing = max(1.0, lineSpacing - 0.25)
+    }
 }

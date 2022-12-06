@@ -13,7 +13,6 @@ import SwiftUI
 
 struct GutenbergPaneSwitcher: View {
     @Binding var currentPane: JensonViewerPane
-
     @State var disabled: Bool = false
 
     var body: some View {
@@ -35,6 +34,7 @@ struct GutenbergPaneSwitcher: View {
                         }
                     } label: {
                         Text("Edit")
+                            .foregroundColor(Color(uiColor: .systemBackground))
                             .font(.subheadline)
                             .fontWeight(.bold)
                             .padding(.horizontal, 8)

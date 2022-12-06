@@ -12,7 +12,7 @@
 import JensonKit
 import SwiftUI
 
-extension JensonDocument: Transferable {
+extension GutenbergDocument: Transferable {
     static var transferRepresentation: some TransferRepresentation {
         DataRepresentation(contentType: .jenson) { file in
             let writer = JensonWriter(contentsOf: file.content)
@@ -25,7 +25,7 @@ extension JensonDocument: Transferable {
         } importing: { data in
             let reader = JensonReader(data)
             let file = (try? reader.decode()) ?? JensonFile.template
-            return JensonDocument(contentsOf: file)
+            return GutenbergDocument(contentsOf: file)
         }
     }
 }

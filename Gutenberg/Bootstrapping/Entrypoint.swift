@@ -15,11 +15,12 @@ import UIKit
 /// The main entry point of the app.
 @main
 struct GutenbergApp: App {
+    @Environment(\.openWindow) var openWindow
     @State private var sourceModel = GutenbergSourceEditorViewModel()
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
 
     var body: some Scene {
-        DocumentGroup(newDocument: JensonDocument()) { file in
+        DocumentGroup(newDocument: GutenbergDocument()) { file in
             ContentView(
                 document: file.$document,
                 documentContainerModel: .init(with: file.$document, at: file.fileURL)
@@ -32,14 +33,42 @@ struct GutenbergApp: App {
             CommandGroup(replacing: .textFormatting) { Text("Removed") }
             GutenbergSourceEditorMenu(model: sourceModel)
 #if targetEnvironment(macCatalyst)
+            CommandGroup(after: .appInfo) {
+                Button {
+                    openWindow(id: "settings")
+                } label: {
+                    Text("Settings...")
+                }
+                .keyboardShortcut(.init(.init(","), modifiers: .command))
+            }
             CommandGroup(after: .toolbar) {
                 Divider()
                 GutenbergSettingsMenu()
                 Divider()
                 JensonThemePicker()
             }
+            CommandGroup(after: .windowArrangement) {
+                Divider()
+                Button {
+                    openWindow(id: "documentation")
+                } label: {
+                    Label("Documentation", systemImage: "questionmark.circle")
+                }
+            }
 #endif
         }
+
+        WindowGroup(id: "documentation") {
+            MarkdownReader(resourceNamed: "JensonFormat")
+                .navigationTitle("The Jenson Format")
+        }
+
+#if targetEnvironment(macCatalyst)
+        WindowGroup(id: "settings") {
+            GutenbergSettingsForm()
+                .formStyle(.grouped)
+        }
+#endif
     }
 }
 

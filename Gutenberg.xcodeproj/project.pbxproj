@@ -16,13 +16,14 @@
 		95315F5B28D8B2830079E831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95315F5A28D8B2830079E831 /* ContentView.swift */; };
 		95315F5D28D8B2840079E831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95315F5C28D8B2840079E831 /* Assets.xcassets */; };
 		95315F6028D8B2840079E831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95315F5F28D8B2840079E831 /* Preview Assets.xcassets */; };
-		95315F6628D8B33E0079E831 /* JensonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5D24F28CA747B00C7C07A /* JensonDocument.swift */; };
+		95315F6628D8B33E0079E831 /* GutenbergDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5D24F28CA747B00C7C07A /* GutenbergDocument.swift */; };
 		95315F6928D8B3810079E831 /* JensonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95315F6828D8B3810079E831 /* JensonKit */; };
 		95315F6B28D8B3AC0079E831 /* String+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533177C28D4B53F00E6E516 /* String+AttributedString.swift */; };
 		95315F6C28D8B3AC0079E831 /* JensonFile+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B97C828D656B40050B41A /* JensonFile+Dummy.swift */; };
 		95315F7128D8B5E90079E831 /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = 95315F7028D8B5E90079E831 /* Runestone */; };
 		95315F7428D8B6E60079E831 /* RunestoneEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95315F7328D8B6E60079E831 /* RunestoneEditor.swift */; };
-		9558462528D8BE21004EE8CD /* JensonDocumentPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */; };
+		9554451E293FC99400930169 /* GutenbergSourceEditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554451D293FC99400930169 /* GutenbergSourceEditorToolbar.swift */; };
+		95544521293FD87D00930169 /* GutenbergPreviewOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95544520293FD87D00930169 /* GutenbergPreviewOutline.swift */; };
 		9558462628D8BE74004EE8CD /* ListTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED128D8A25B00EF8827 /* ListTableRow.swift */; };
 		9558462D28D8E09F004EE8CD /* TreeSitterJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9558462C28D8E09F004EE8CD /* TreeSitterJSON */; };
 		9558463128D8E0AC004EE8CD /* TreeSitterJSONRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = 9558463028D8E0AC004EE8CD /* TreeSitterJSONRunestone */; };
@@ -46,12 +47,18 @@
 		9558464A28D8F496004EE8CD /* CrimsonText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9533178128D4BAA200E6E516 /* CrimsonText-Bold.ttf */; };
 		9558464C28D8F63E004EE8CD /* GutenbergPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */; };
 		9558464D28D8F744004EE8CD /* JensonThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD1ED328D8A8ED00EF8827 /* JensonThemePicker.swift */; };
+		95704B04293F913200571375 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95704B03293F913200571375 /* AnimatedButton.swift */; };
 		95874480290AC64B00397288 /* GutenbergSettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587447F290AC64B00397288 /* GutenbergSettingsMenu.swift */; };
 		95874482290ACA0E00397288 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 95874481290ACA0E00397288 /* Credits.rtf */; };
 		95874484290ACD0700397288 /* GutenbergSourceEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95874483290ACD0700397288 /* GutenbergSourceEditorViewModel.swift */; };
 		95874486290ACD9900397288 /* GutenbergSourceEditorMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95874485290ACD9900397288 /* GutenbergSourceEditorMenu.swift */; };
 		958D71B9293934B9001020FF /* GutenbergPaneSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D71B8293934B9001020FF /* GutenbergPaneSwitcher.swift */; };
 		95A9B0F22937C3CC00A316BE /* Marteau in Frameworks */ = {isa = PBXBuildFile; productRef = 95A9B0F12937C3CC00A316BE /* Marteau */; };
+		95B1ECAD293E75F5003E017E /* GutenbergSettingsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1ECAC293E75F5003E017E /* GutenbergSettingsForm.swift */; };
+		95B1ECAF293E7D3E003E017E /* GutenbergSidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1ECAE293E7D3E003E017E /* GutenbergSidebarMenu.swift */; };
+		95B1ECB1293E833E003E017E /* GutenbergEventCountOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1ECB0293E833E003E017E /* GutenbergEventCountOverlay.swift */; };
+		95B1ECB3293E8F0E003E017E /* MarkdownReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1ECB2293E8F0E003E017E /* MarkdownReader.swift */; };
+		95B1ECB5293E8FE8003E017E /* JensonFormat.md in Resources */ = {isa = PBXBuildFile; fileRef = 95B1ECB4293E8FE8003E017E /* JensonFormat.md */; };
 		95D75D3D28DA416000062587 /* GutenbergDocumentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */; };
 		95D75D4028DA446000062587 /* ModifiedDefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */; };
 		95D75D4228DA448E00062587 /* RunestoneEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75D4128DA448E00062587 /* RunestoneEditorDelegate.swift */; };
@@ -77,18 +84,20 @@
 		9533178128D4BAA200E6E516 /* CrimsonText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CrimsonText-Bold.ttf"; sourceTree = "<group>"; };
 		9533178328D4BBB300E6E516 /* CrimsonText-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CrimsonText-Italic.ttf"; sourceTree = "<group>"; };
 		953CC65F28DB5A790038853A /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		9554451D293FC99400930169 /* GutenbergSourceEditorToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSourceEditorToolbar.swift; sourceTree = "<group>"; };
+		95544520293FD87D00930169 /* GutenbergPreviewOutline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergPreviewOutline.swift; sourceTree = "<group>"; };
 		9558463E28D8E274004EE8CD /* GutenbergSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSourceView.swift; sourceTree = "<group>"; };
 		9558464028D8E368004EE8CD /* JensonDocument+Transferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JensonDocument+Transferable.swift"; sourceTree = "<group>"; };
 		9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergPreview.swift; sourceTree = "<group>"; };
 		9569158C28DB460A000D3D8F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9569158D28DB47DF000D3D8F /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		95704B03293F913200571375 /* AnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
 		957B97C828D656B40050B41A /* JensonFile+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JensonFile+Dummy.swift"; sourceTree = "<group>"; };
 		9587447F290AC64B00397288 /* GutenbergSettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSettingsMenu.swift; sourceTree = "<group>"; };
 		95874481290ACA0E00397288 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		95874483290ACD0700397288 /* GutenbergSourceEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSourceEditorViewModel.swift; sourceTree = "<group>"; };
 		95874485290ACD9900397288 /* GutenbergSourceEditorMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSourceEditorMenu.swift; sourceTree = "<group>"; };
 		958D71B8293934B9001020FF /* GutenbergPaneSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergPaneSwitcher.swift; sourceTree = "<group>"; };
-		9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonDocumentPropertiesView.swift; sourceTree = "<group>"; };
 		9597F91C28CB907D00A886E3 /* JensonViewerPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonViewerPane.swift; sourceTree = "<group>"; };
 		9597F92728CBB0ED00A886E3 /* PreviewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTheme.swift; sourceTree = "<group>"; };
 		9597F92928CBB4FA00A886E3 /* PreviewThemeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewThemeSelection.swift; sourceTree = "<group>"; };
@@ -100,7 +109,12 @@
 		95AD1EDC28D8AC7500EF8827 /* JensonCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonCommentCell.swift; sourceTree = "<group>"; };
 		95AD1EDE28D8ACE100EF8827 /* JensonDialogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonDialogueCell.swift; sourceTree = "<group>"; };
 		95AD1EE028D8AD4000EF8827 /* JensonQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonQuestionCell.swift; sourceTree = "<group>"; };
-		95B5D24F28CA747B00C7C07A /* JensonDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonDocument.swift; sourceTree = "<group>"; };
+		95B1ECAC293E75F5003E017E /* GutenbergSettingsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSettingsForm.swift; sourceTree = "<group>"; };
+		95B1ECAE293E7D3E003E017E /* GutenbergSidebarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergSidebarMenu.swift; sourceTree = "<group>"; };
+		95B1ECB0293E833E003E017E /* GutenbergEventCountOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergEventCountOverlay.swift; sourceTree = "<group>"; };
+		95B1ECB2293E8F0E003E017E /* MarkdownReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownReader.swift; sourceTree = "<group>"; };
+		95B1ECB4293E8FE8003E017E /* JensonFormat.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = JensonFormat.md; sourceTree = "<group>"; };
+		95B5D24F28CA747B00C7C07A /* GutenbergDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergDocument.swift; sourceTree = "<group>"; };
 		95B5D26228CA7D9900C7C07A /* JensonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JensonCellView.swift; sourceTree = "<group>"; };
 		95D75D3C28DA416000062587 /* GutenbergDocumentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutenbergDocumentContainer.swift; sourceTree = "<group>"; };
 		95D75D3F28DA446000062587 /* ModifiedDefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedDefaultTheme.swift; sourceTree = "<group>"; };
@@ -139,15 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				958D71B729393344001020FF /* Bootstrapping */,
-				958D71B62939332B001020FF /* Preferences */,
-				958D71B4293932FD001020FF /* Document Management */,
-				958D71B3293932C8001020FF /* Document Container */,
+				9554451F293FCF3C00930169 /* Features */,
+				95704B05293F9CB200571375 /* About App View */,
 				9558462428D8BE16004EE8CD /* Components */,
-				9558463428D8E1F5004EE8CD /* Theming */,
-				958D71B229393295001020FF /* Preview */,
-				958D71B129393274001020FF /* Source Editor */,
-				950DF31628DA297400C4D17A /* Gutenberg.entitlements */,
 				950DF30D28DA077C00C4D17A /* Extensions */,
+				950DF31628DA297400C4D17A /* Gutenberg.entitlements */,
 				95315F6128D8B2840079E831 /* Info.plist */,
 				95315F5E28D8B2840079E831 /* Preview Content */,
 			);
@@ -180,11 +190,27 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		9554451F293FCF3C00930169 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				958D71B3293932C8001020FF /* Document Container */,
+				958D71B4293932FD001020FF /* Document Management */,
+				958D71B62939332B001020FF /* Preferences */,
+				958D71B229393295001020FF /* Preview */,
+				958D71B129393274001020FF /* Source Editing */,
+				9558463428D8E1F5004EE8CD /* Theming */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		9558462428D8BE16004EE8CD /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				95AD1ED528D8AA2D00EF8827 /* PaddedHStack.swift */,
 				95AD1ED128D8A25B00EF8827 /* ListTableRow.swift */,
+				95B1ECB0293E833E003E017E /* GutenbergEventCountOverlay.swift */,
+				95B1ECB2293E8F0E003E017E /* MarkdownReader.swift */,
+				95704B03293F913200571375 /* AnimatedButton.swift */,
 			);
 			name = Components;
 			path = ../Shared/Components;
@@ -200,15 +226,26 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
-		958D71B129393274001020FF /* Source Editor */ = {
+		95704B05293F9CB200571375 /* About App View */ = {
+			isa = PBXGroup;
+			children = (
+				950DF31228DA12C600C4D17A /* Credits.md */,
+				95874481290ACA0E00397288 /* Credits.rtf */,
+				950DF31028DA0D5400C4D17A /* GutenbergAboutView.swift */,
+			);
+			path = "About App View";
+			sourceTree = "<group>";
+		};
+		958D71B129393274001020FF /* Source Editing */ = {
 			isa = PBXGroup;
 			children = (
 				95D75D3E28DA444800062587 /* Runestone */,
 				95874485290ACD9900397288 /* GutenbergSourceEditorMenu.swift */,
 				9558463E28D8E274004EE8CD /* GutenbergSourceView.swift */,
 				95874483290ACD0700397288 /* GutenbergSourceEditorViewModel.swift */,
+				9554451D293FC99400930169 /* GutenbergSourceEditorToolbar.swift */,
 			);
-			path = "Source Editor";
+			path = "Source Editing";
 			sourceTree = "<group>";
 		};
 		958D71B229393295001020FF /* Preview */ = {
@@ -216,6 +253,7 @@
 			children = (
 				95AD1ED928D8AB1B00EF8827 /* Cells */,
 				9558464B28D8F63E004EE8CD /* GutenbergPreview.swift */,
+				95544520293FD87D00930169 /* GutenbergPreviewOutline.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -235,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				958D71B529393311001020FF /* Extensions */,
-				95B5D24F28CA747B00C7C07A /* JensonDocument.swift */,
+				95B5D24F28CA747B00C7C07A /* GutenbergDocument.swift */,
 			);
 			path = "Document Management";
 			sourceTree = "<group>";
@@ -253,11 +291,9 @@
 			isa = PBXGroup;
 			children = (
 				9533178028D4BA5500E6E516 /* Fonts */,
-				950DF31228DA12C600C4D17A /* Credits.md */,
-				95874481290ACA0E00397288 /* Credits.rtf */,
-				950DF31028DA0D5400C4D17A /* GutenbergAboutView.swift */,
 				9587447F290AC64B00397288 /* GutenbergSettingsMenu.swift */,
-				9597F90628CB744100A886E3 /* JensonDocumentPropertiesView.swift */,
+				95B1ECAC293E75F5003E017E /* GutenbergSettingsForm.swift */,
+				95B1ECAE293E7D3E003E017E /* GutenbergSidebarMenu.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -265,6 +301,7 @@
 		958D71B729393344001020FF /* Bootstrapping */ = {
 			isa = PBXGroup;
 			children = (
+				95B1ECB4293E8FE8003E017E /* JensonFormat.md */,
 				95315F5C28D8B2840079E831 /* Assets.xcassets */,
 				95315F5628D8B2830079E831 /* Entrypoint.swift */,
 				95315F5A28D8B2830079E831 /* ContentView.swift */,
@@ -394,6 +431,7 @@
 				950DF31328DA12C600C4D17A /* Credits.md in Resources */,
 				9558464A28D8F496004EE8CD /* CrimsonText-Bold.ttf in Resources */,
 				9558464728D8F496004EE8CD /* CrimsonText-Regular.ttf in Resources */,
+				95B1ECB5293E8FE8003E017E /* JensonFormat.md in Resources */,
 				95874482290ACA0E00397288 /* Credits.rtf in Resources */,
 				95315F6028D8B2840079E831 /* Preview Assets.xcassets in Resources */,
 				95315F5D28D8B2840079E831 /* Assets.xcassets in Resources */,
@@ -433,10 +471,12 @@
 			files = (
 				9558463A28D8E252004EE8CD /* JensonDialogueCell.swift in Sources */,
 				958D71B9293934B9001020FF /* GutenbergPaneSwitcher.swift in Sources */,
+				95B1ECB1293E833E003E017E /* GutenbergEventCountOverlay.swift in Sources */,
 				9558463628D8E206004EE8CD /* PreviewTheme.swift in Sources */,
 				950DF30F28DA079200C4D17A /* TextView+Convenience.swift in Sources */,
 				9558463C28D8E252004EE8CD /* JensonCommentCell.swift in Sources */,
 				950DF31128DA0D5400C4D17A /* GutenbergAboutView.swift in Sources */,
+				95B1ECB3293E8F0E003E017E /* MarkdownReader.swift in Sources */,
 				95315F7428D8B6E60079E831 /* RunestoneEditor.swift in Sources */,
 				95874480290AC64B00397288 /* GutenbergSettingsMenu.swift in Sources */,
 				9558462628D8BE74004EE8CD /* ListTableRow.swift in Sources */,
@@ -444,10 +484,13 @@
 				9558464C28D8F63E004EE8CD /* GutenbergPreview.swift in Sources */,
 				95D75D4028DA446000062587 /* ModifiedDefaultTheme.swift in Sources */,
 				9558463828D8E252004EE8CD /* JensonChoiceGroup.swift in Sources */,
+				9554451E293FC99400930169 /* GutenbergSourceEditorToolbar.swift in Sources */,
+				95B1ECAF293E7D3E003E017E /* GutenbergSidebarMenu.swift in Sources */,
 				9558463528D8E203004EE8CD /* PreviewThemeSelection.swift in Sources */,
 				9558464628D8F1D9004EE8CD /* JensonViewerPane.swift in Sources */,
 				95D75D3D28DA416000062587 /* GutenbergDocumentContainer.swift in Sources */,
 				9558464D28D8F744004EE8CD /* JensonThemePicker.swift in Sources */,
+				95704B04293F913200571375 /* AnimatedButton.swift in Sources */,
 				95315F5728D8B2830079E831 /* Entrypoint.swift in Sources */,
 				9558463D28D8E252004EE8CD /* JensonCellView.swift in Sources */,
 				9519A8942937F773001C58C5 /* GutenbergDocumentContainerViewModel.swift in Sources */,
@@ -455,14 +498,15 @@
 				9558463728D8E239004EE8CD /* PaddedHStack.swift in Sources */,
 				95874486290ACD9900397288 /* GutenbergSourceEditorMenu.swift in Sources */,
 				95874484290ACD0700397288 /* GutenbergSourceEditorViewModel.swift in Sources */,
-				9558462528D8BE21004EE8CD /* JensonDocumentPropertiesView.swift in Sources */,
 				9558464128D8E368004EE8CD /* JensonDocument+Transferable.swift in Sources */,
 				9558463F28D8E274004EE8CD /* GutenbergSourceView.swift in Sources */,
-				95315F6628D8B33E0079E831 /* JensonDocument.swift in Sources */,
+				95315F6628D8B33E0079E831 /* GutenbergDocument.swift in Sources */,
 				95315F6C28D8B3AC0079E831 /* JensonFile+Dummy.swift in Sources */,
 				950DF31528DA19D100C4D17A /* UIApplication+Version.swift in Sources */,
+				95544521293FD87D00930169 /* GutenbergPreviewOutline.swift in Sources */,
 				95315F5B28D8B2830079E831 /* ContentView.swift in Sources */,
 				9558463B28D8E252004EE8CD /* JensonQuestionCell.swift in Sources */,
+				95B1ECAD293E75F5003E017E /* GutenbergSettingsForm.swift in Sources */,
 				95D75D4228DA448E00062587 /* RunestoneEditorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = Gutenberg/Gutenberg.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg/Preview Content\"";
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_PREVIEWS = YES;
@@ -521,7 +565,7 @@
 				CODE_SIGN_ENTITLEMENTS = Gutenberg/Gutenberg.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Gutenberg/Preview Content\"";
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_PREVIEWS = YES;

@@ -16,7 +16,7 @@ import UniformTypeIdentifiers
 import Marteau
 
 /// A struct that represents an open Jenson document container.
-struct JensonDocument: FileDocument {
+struct GutenbergDocument: FileDocument {
     /// The associated file types this document will be able to read.
     static var readableContentTypes: [UTType] { [.jenson, .markdown] }
 
@@ -71,6 +71,10 @@ struct JensonDocument: FileDocument {
                     name: "Gutenberg (converted)",
                     website: "https://github.com/Indexing-Your-Heart/gutenberg"
                 ),
+                story: .init(
+                    name: configuration.file.filename?.replacingOccurrences(of: ".md", with: "") ?? "Untitled Story",
+                    author: JensonFile.authorName
+                ),
                 timeline: translated.timeline
             )
         } else {
@@ -124,6 +128,6 @@ extension UTType {
 
     /// Represents a Markdown file.
     static var markdown: UTType {
-        UTType(importedAs: "art.indexingyourhe.markdown")
+        UTType(importedAs: "com.daringfireball.markdown")
     }
 }

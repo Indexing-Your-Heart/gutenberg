@@ -16,7 +16,14 @@ extension String {
     /// if the conversion fails.
     func attributed() -> AttributedString {
         do {
-            return try AttributedString(markdown: self)
+            return try AttributedString(
+                markdown: self,
+                options: .init(
+                    allowsExtendedAttributes: true,
+                    interpretedSyntax: .inlineOnlyPreservingWhitespace,
+                    failurePolicy: .returnPartiallyParsedIfPossible
+                )
+            )
         } catch {
             return AttributedString(stringLiteral: self)
         }
