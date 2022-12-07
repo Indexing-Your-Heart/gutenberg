@@ -28,7 +28,7 @@
 			<string>art.indexingyourhe.gutenberg</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>gutenberg://</string>
+				<string>gutenberg</string>
 			</array>
 		</dict>
 	</array>
