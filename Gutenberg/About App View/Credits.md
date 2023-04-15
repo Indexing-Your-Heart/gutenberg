@@ -22,3 +22,7 @@ https://fonts.google.com/specimen/Crimson+Text
 
 **iA Writer Mono**  
 https://github.com/iaolo/iA-Fonts
+
+--- 
+
+The Gutenberg icon was created by VegasOs.

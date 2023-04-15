@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.0-11] - 15-04-2022
+- Updates app icon.
+- Overhauls documentation viewer.
+
 ## [1.0-8] - 06-12-2022
 NOTE: Only available for iOS and iPadOS
 - Adds Markdown import support

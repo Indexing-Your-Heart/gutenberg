@@ -81,26 +81,26 @@ struct GutenbergSourceEditorToolbar: CustomizableToolbarContent {
                 }
                 .keyboardShortcut("l", modifiers: [.control, .option, .command])
             }
-                        ToolbarItem(id: "findreplace", placement: .navigationBarTrailing) {
-                            Menu {
-                                Button {
-                                    withAnimation {
-                                        sourceModel.findNavigationState = .find
-                                    }
-                                } label: {
-                                    Label("Find", systemImage: "magnifyingglass")
-                                }
-                                Button {
-                                    withAnimation {
-                                        sourceModel.findNavigationState = .replace
-                                    }
-                                } label: {
-                                    Label("Find and Replace", systemImage: "text.magnifyingglass")
-                                }
-                            } label: {
-                                Label("Find/Replace", systemImage: "magnifyingglass.circle")
-                            }
+            ToolbarItem(id: "findreplace", placement: .navigationBarTrailing) {
+                Menu {
+                    Button {
+                        withAnimation {
+                            sourceModel.findNavigationState = .find
                         }
+                    } label: {
+                        Label("Find", systemImage: "magnifyingglass")
+                    }
+                    Button {
+                        withAnimation {
+                            sourceModel.findNavigationState = .replace
+                        }
+                    } label: {
+                        Label("Find and Replace", systemImage: "text.magnifyingglass")
+                    }
+                } label: {
+                    Label("Find/Replace", systemImage: "magnifyingglass.circle")
+                }
+            }
             #endif
         }
     }

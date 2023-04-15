@@ -59,8 +59,8 @@ struct GutenbergApp: App {
         }
 
         WindowGroup(id: "documentation") {
-            MarkdownReader(resourceNamed: "JensonFormat")
-                .navigationTitle("The Jenson Format")
+            GutenbergDocumentationViewer()
+                .navigationTitle("Documentation")
         }
 
 #if targetEnvironment(macCatalyst)
